@@ -1,9 +1,41 @@
 package HW01;
 
-public class Product {
+public abstract class Product {
 
-String name;
+    private String name;
 
-int price;
+    private int price;
+
+
+    public Product() {
+    }
+
+
+    public Product(String name, int price) {
+        this.name = name;
+        this.price = price;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "{" + " name='" + name + "'" + ", price='" + price + "'" + "}";
+    }
 
 }
